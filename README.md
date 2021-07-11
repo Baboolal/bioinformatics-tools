@@ -29,7 +29,8 @@ Reading frames:\
 
 family_species_list_generator.py
 
-fasta_maker.py
+fasta_maker.py\
+Converts tab-delimited text format into FASTA.
 
 fasta_to_tab_text.py
 
