@@ -30,7 +30,8 @@ Reading frames:\
 family_species_list_generator.py
 
 fasta_maker.py\
-Converts tab-delimited text format into FASTA.
+Converts tab-delimited text format into FASTA.\
+Program will read .txt file and writes .fa file.
 
 fasta_to_tab_text.py
 
