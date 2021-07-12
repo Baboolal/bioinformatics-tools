@@ -1,0 +1,41 @@
+Excel macro for removing newlines:
+Sub remove_newlines()
+'
+' remove_newlines Macro
+' allahu
+'
+' Keyboard Shortcut: Ctrl+r
+'
+    Dim MyRange As Range
+    Application.ScreenUpdating = False
+        Application.Calculation = xlCalculationManual
+ 
+        For Each MyRange In ActiveSheet.UsedRange
+                If 0 < InStr(MyRange, Chr(10)) Then
+                        MyRange = Replace(MyRange, Chr(10), "")
+                End If
+        Next
+ 
+    Application.ScreenUpdating = True
+    Application.Calculation = xlCalculationAutomatic
+End Sub
+
+Word macro for highlighting peptide regions and cysteines, and underline N/D everywhere:
+Sub ND_underliner()
+' ND_underliner Macro
+    Dim counter As Integer
+    For counter = 1 To Len(Selection)
+        Selection.Characters(counter).Font.Bold = True
+    
+        If Selection.Characters(counter).Font.ColorIndex = "6" Then
+            Selection.Characters(counter).HighlightColorIndex = "7"
+            If Selection.Characters(counter).Text = "C" Then
+                Selection.Characters(counter).HighlightColorIndex = "9"
+            End If
+        End If
+        
+        If Selection.Characters(counter).Text = "N" Or Selection.Characters(counter).Text = "D" Then
+            Selection.Characters(counter).Font.Underline = True
+        End If
+    Next
+End Sub
