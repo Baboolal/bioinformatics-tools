@@ -48,3 +48,5 @@ species_family_order.py
 cyclotide_syntax.dat
 
 translation_and_motif_search_detailed_v3.pdf
+
+macros.txt
