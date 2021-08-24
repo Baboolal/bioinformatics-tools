@@ -14,6 +14,8 @@ AAGGKVCTNNYCCSKWGSCGIGPGYCGAGCQSGGCDGVFAEAIAANSTLVAE
 output (header species full_seq)
 gnl|onekp|RMVB_scaffold_2006997 Avena fatua MMMCPGNQC....CGYTC
 gnl|onekp|RMVB_scaffold_2006997 Avena fatua MMMCPGNQC....CGYTC
+
+record.id \t species \t fullseq \n
 '''
 
 from Bio import SeqIO
